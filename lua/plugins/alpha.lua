@@ -32,8 +32,11 @@ return {
       button.opts.hl_shortcut = "AlphaShortcut"
     end
     dashboard.section.header.opts.hl = "AlphaHeader"
+    vim.api.nvim_set_hl(0, "AlphaHeader", { fg = "#7287fd" })
     dashboard.section.buttons.opts.hl = "AlphaButtons"
+    vim.api.nvim_set_hl(0, "AlphaButtons", { fg = "#99d1db" })
     dashboard.section.footer.opts.hl = "AlphaFooter"
+    vim.api.nvim_set_hl(0, "AlphaFooter", { fg = "#99d1db" })
     dashboard.opts.layout[1].val = 8
     return dashboard
   end,

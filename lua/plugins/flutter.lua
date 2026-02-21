@@ -1,13 +1,19 @@
 return {
   "akinsho/flutter-tools.nvim",
-  lazy = false, -- bắt buộc load ngay
   dependencies = {
     "nvim-lua/plenary.nvim",
     "neovim/nvim-lspconfig",
   },
   config = function()
     require("flutter-tools").setup({
-      flutter_path = "flutter",
+      flutter_path = vim.fn.expand("$HOME/flutter/bin/flutter"),
+      lsp = {
+        settings = {
+          dart = {
+            completeFunctionCalls = true,
+          },
+        },
+      },
     })
   end,
 }
